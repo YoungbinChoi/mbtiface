@@ -54,7 +54,7 @@ body {
 .file-upload-input {
   position: absolute;
   font-size: 0.4rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 100%;
