@@ -1,195 +1,128 @@
 @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
 
-* {
-	margin: 0;
-	padding: 0;
+
+body {
+  font-family: 'Hanna', fantasy;
+  background-color: #ffffff;
 	box-sizing: border-box;
 }
-body {
-	background: #ffffff .hanna * {
-		font-family: 'Hanna', fantasy;
-	}
-	line-height: 1;
+
+.file-upload {
+	width: 50%;
+	padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: solid 4px #2E2E2E;
+    background-color: #EFFBFB;
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 6px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
 }
 
 .file-upload-content {
-	display: none;
-	text-align: center;
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
 }
 
 .file-upload-input {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	outline: none;
-	opacity: 0;
-	cursor: pointer;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .image-upload-wrap {
-	margin-top: 20px;
-	border: 4px dashed #1fb264;
-	position: relative;
+    width: 60%;
+    margin: 5% auto;
+    position: relative;
+    object-fit: contain;
+    background-color: #EFFBFB;
 }
 
 .image-dropping,
 .image-upload-wrap:hover {
-	background-color: #1fb264;
-	border: 4px dashed #ffffff;
+  background-color: #EFFBFB;
 }
 
 .image-title-wrap {
-	padding: 0 15px 15px 15px;
-	color: #222;
+  padding: 0 15px 15px 15px;
+  font-size: 1rem;
+  color: #000000;
 }
 
 .drag-text {
-	text-align: center;
+ text-align: center;
 }
 
 .drag-text h3 {
-	font-weight: 100;
-	text-transform: uppercase;
-	color: #15824b;
-	padding: 60px 0;
+  font-weight: 500;
+  text-transform: uppercase;
 }
-
+.clickimg{
+	width: 30%;
+}
 .file-upload-image {
-	max-height: 200px;
-	max-width: 200px;
-	margin: auto;
-	padding: 20px;
-}
-.container {
-	max-width: 1100px;
-	padding: 0 20px;
-	margin: 0 auto;
-}
-.panel {
-	margin: auto;
-	max-width: 500px;
-	text-align: center;
-}
-.button_outer {
-	background: #EFF8FB;
-	border-radius: 30px;
-	text-align: center;
-	display: inline-block;
-	transition: 0.2s;
-	position: relative;
-	overflow: hidden; 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    /* outline: none;
-    opacity: 0;
-    cursor: pointer; */
-}
-.btn_upload {
-    width: 60%;
-    font-size: 3.5rem;
-    line-height: 1.53;
-    text-align: center;
-	font-family: 'Hanna', fantasy;
-    color: #000000;
-    margin: 0 auto;
-}
-.btn_upload input {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 105%;
-	cursor: pointer;
-	opacity: 0;
-}
-.file_uploading {
-	width: 0%;
-	height: 0px;
-	margin-top: 0px;
-	background: #ffffff
-}
-.file_uploading .btn_upload {
-	display: none;
-}
-.file-upload {
-	width: 70%;
-	height: 60%;
-    padding: 2% 1%;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: solid 1.5px #EFF8FB;
-    background-color: #EFF8FB;
-	text-align: center;
-}
-.text-out {
-	width: 70%;
-    padding: 1% 1%;
-    margin: 0 auto;
-    background-color: #EFF8FB;
-	text-align: center;
-}
-.uploaded_file_view {
-	max-width: 300px;
-	margin: 1px auto;
-	text-align: center;
-	position: relative;
-	transition: 0.2s;
-	opacity: 0;
-	padding: 15px;
-}
-.file_remove {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	display: block;
-	position: absolute;
-	background: #aaa;
-	line-height: 30px;
-	color: #fff;
-	font-size: 12px;
-	cursor: pointer;
-	right: -15px;
-	top: -15px;
-}
-.file_remove:hover {
-	background: #222;
-	transition: 0.2s;
-}
-.uploaded_file_view img {
-	max-width: 60%;
-}
-.uploaded_file_view.show {
-	opacity: 1;
-}
-.error_msg {
-	text-align: center;
-	color: #f00;
+  max-height: 60%;
+  max-width: 60%;
+  margin: auto;
+  padding: 10px;
 }
 
-.nav-distance {
-	padding: 2.1% 7.7%;
-}
-.navbar-light .navbar-brand {
-	width: 350px;
-	height: 100px;
-	font-family: 'Hanna', fantasy;
-	font-size: 2rem;
-	line-height: 1.68;
-	text-align: left;
-	color: #1c1c1c;
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
 }
 
-.navbar-light .navbar-toggler {
-	border-color: #ffffff;
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
 }
 
-.section {
-	margin-top: 100px;
+.remove-image:hover {
+  background: #6E6E6E;
+	font-size: 1.3rem;
+	  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
 }
 
 .title {
@@ -221,12 +154,66 @@ body {
 	text-align: center;
 	color: #000000;	
 }
-
-@media screen and (max-width: 600px) {
-	html {
-		font-size: 10px;
-	}
-	.navbar-brand {
-		font-size: 1.2rem;
-	}
+.result_pp{
+	font-size: 1.5rem;
+	font-family: 'Hanna', fantasy;
+	line-height: 1.68;
+	text-align: center;
+	color: #0B0B61;	
 }
+.noti{
+	font-size: 0.8rem;
+	font-family: 'Hanna', fantasy;
+	line-height: 1.68;
+	text-align: center;
+	color: #000000;	
+}
+.remove-image {
+  font-size: 1.3rem;
+  border-radius: 40px;
+  border: solid 1.5px #A4A4A4;
+  background-color: #A4A4A4;
+}
+.loadingBar {
+  position: center;
+}
+.loading-bar {
+  display: inline-block;
+  width: 3px;
+  height: 10px;
+  border-radius: 4px;
+  animation: loading 1s ease-in-out infinite;
+}
+.loading-bar:nth-child(1) {
+  background-color: #3498db;
+  animation-delay: 0;
+}
+.loading-bar:nth-child(2) {
+  background-color: #c0392b;
+  animation-delay: 0.09s;
+}
+.loading-bar:nth-child(3) {
+  background-color: #f1c40f;
+  animation-delay: .18s;
+}
+.loading-bar:nth-child(4) {
+  background-color: #27ae60;
+  animation-delay: .27s;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 2.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+#chartdiv {
+	width	: 100%;
+	height	: 500px;
+}			
+				
